@@ -39,7 +39,11 @@ aside {
  * smaller screen sizes.
  */
 /* @media <condition?> {} */
-
+@media only screen and (min-width:750px) {
+.container{
+  display: flex;
+}
+}
 
 /**
  * EXERCISE 2:
@@ -47,7 +51,18 @@ aside {
  * unordered list into two columns of list items.
  */
 /* @media <condition?> {} */
-
+@media only screen and (min-width:900px) {
+  ul{
+    display: flex;
+    flex-wrap:wrap;
+    list-style-type: none;
+    padding: 0;
+  }
+  li{
+    width:50%;
+    padding:20px;
+  }
+}
 
 /**
  * EXERCISE 3:
@@ -56,7 +71,9 @@ aside {
  * a media query for this?
  */
 /* ??? */
-
+.container{
+  max-width: 1000px;
+}
 
 /**
  * EXERCISE 4:
@@ -65,7 +82,11 @@ aside {
  * width.
  */
 /* @media <condition?> {} */
-
+@media  (max-width:500px) {
+  body{
+  padding: 0
+}
+}
 
 /**
  * EXERCISE 5:
@@ -73,7 +94,11 @@ aside {
  * 810px, rotate the contents of the entire page upside down.
  */
 /* @media <condition?> {} */
-
+@media (min-width: 800px) and (max-width:810px){
+  body{
+  transform: rotate(180deg);
+}
+}
 
 /**
  * EXERCISE 6:
@@ -82,4 +107,16 @@ aside {
  * blue. Mwahahaha!
  */
 /* @media <condition?> {} */
-
+@media print {
+  body {
+    color: yellow;
+    background-color: blue;
+  }
+  body main{
+    background-color: blue;
+  }
+  body aside{
+    color: yellow;
+    background-color: blue;
+  }
+}
